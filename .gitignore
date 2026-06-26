@@ -1,0 +1,12 @@
+# Composer dependencies
+vendor/
+
+# Environment file (sensitive credentials - never commit)
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# PHP error logs
+*.log
