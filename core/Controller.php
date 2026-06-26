@@ -9,6 +9,6 @@ class Controller
         extract($data);
 
         // Include the view file
-        require_once __DIR__ . '/../app/views/' . $view . '.php';
+        require __DIR__ . '/../app/Views/' . $view . '.php';
     }
 }
