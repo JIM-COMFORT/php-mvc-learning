@@ -1,0 +1,19 @@
+# Disable directory listing
+Options -Indexes
+
+# Prevent direct browser access to this file
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Enable the URL rewriting engine
+RewriteEngine On
+
+# Only rewrite if request is not a real file
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# Only rewrite if request is not a real directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Send all other requests through index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
